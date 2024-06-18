@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import Link from 'next/link'
 import { Card } from '@/components/ui/card'
 import Image from 'next/image'
@@ -41,9 +41,7 @@ export default function home() {
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#"
-          >
-            <ModeToggle/>
-          </Link>
+          ></Link>
         </nav>
       </header>
       <main className="flex-1">
@@ -86,17 +84,14 @@ export default function home() {
             </div>
           </div>
         </section>
-        <section
-          className="w-full py-12 md:py-24 lg:py-32 bg-secondaryColor"
-          id="features"
-        >
+        <section className="w-full py-12 md:py-24 lg:py-32" id="features">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Powerful Features to Manage Your Finances
                 </h2>
-                <p className="max-w-[900px] text-primaryText md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Our budgeting app provides the tools you need to take control
                   of your finances and reach your financial goals.
                 </p>
@@ -107,8 +102,8 @@ export default function home() {
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold text-backgroundColor">Expense Tracking</h3>
-                      <p className="text-primaryText">
+                      <h3 className="text-xl font-bold">Expense Tracking</h3>
+                      <p className="">
                         Easily track your expenses and categorize them to gain
                         insights into your spending habits.
                       </p>
@@ -116,7 +111,9 @@ export default function home() {
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold text-backgroundColor">Budget Planning</h3>
+                      <h3 className="text-xl font-bold text-backgroundColor">
+                        Budget Planning
+                      </h3>
                       <p className="text-primaryText">
                         Create and manage your budget to ensure you&apos;re
                         staying on track with your financial goals.
@@ -125,7 +122,9 @@ export default function home() {
                   </li>
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold text-backgroundColor">Financial Insights</h3>
+                      <h3 className="text-xl font-bold text-backgroundColor">
+                        Financial Insights
+                      </h3>
                       <p className="text-primaryText">
                         Receive personalized insights and recommendations to
                         improve your financial well-being.
@@ -159,7 +158,7 @@ export default function home() {
                 </p>
               </div>
               <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-                <Card className="flex flex-col items-start space-y-4 rounded-lg border bg-primaryColor text-primaryText p-6 shadow-sm transition-colors hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800">
+                <Card className="flex flex-col items-start space-y-4 rounded-lg border  text-primaryText p-6 shadow-sm transition-colors hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800">
                   <div className="flex items-center space-x-4">
                     <WalletIcon className="h-12 w-12 rounded-full bg-gray-100 p-2 text-gray-900 dark:bg-gray-800 dark:text-gray-50" />
                     <div>
@@ -170,7 +169,7 @@ export default function home() {
                     </div>
                   </div>
                 </Card>
-                <Card className="flex flex-col items-start space-y-4 rounded-lg border bg-primaryColor text-primaryText p-6 shadow-sm transition-colors hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800">
+                <Card className="flex flex-col items-start space-y-4 rounded-lg border  text-primaryText p-6 shadow-sm transition-colors hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800">
                   <div className="flex items-center space-x-4">
                     <MailOpenIcon className="h-12 w-12 rounded-full bg-gray-100 p-2 text-gray-900 dark:bg-gray-800 dark:text-gray-50" />
                     <div>
@@ -181,7 +180,7 @@ export default function home() {
                     </div>
                   </div>
                 </Card>
-                <Card className="flex flex-col items-start space-y-4 rounded-lg border bg-primaryColor text-primaryText p-6 shadow-sm transition-colors hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800">
+                <Card className="flex flex-col items-start space-y-4 rounded-lg border  text-primaryText p-6 shadow-sm transition-colors hover:bg-gray-100 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800">
                   <div className="flex items-center space-x-4">
                     <PowerIcon className="h-12 w-12 rounded-full bg-gray-100 p-2 text-gray-900 dark:bg-gray-800 dark:text-gray-50" />
                     <div>

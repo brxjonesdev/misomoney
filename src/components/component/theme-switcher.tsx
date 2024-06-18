@@ -1,16 +1,16 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import * as React from 'react'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from '@/components/ui/dropdown-menu'
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
@@ -25,38 +25,38 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-            Dark
+        <DropdownMenuItem onClick={() => setTheme('dark')}>
+          Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("coolgrey-light")}>
-            Cool Grey Light
+        <DropdownMenuItem onClick={() => setTheme('coolgrey-light')}>
+          Cool Grey Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("coolgrey-dark")}>
-            Cool Grey Dark
+        <DropdownMenuItem onClick={() => setTheme('coolgrey-dark')}>
+          Cool Grey Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("purple-light")}>
-            Purple Light
+        <DropdownMenuItem onClick={() => setTheme('purple-light')}>
+          Purple Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("purple-dark")}>
-            Purple Dark
+        <DropdownMenuItem onClick={() => setTheme('purple-dark')}>
+          Purple Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("coolblues-light")}>
-            Cool Blues Light
+        <DropdownMenuItem onClick={() => setTheme('coolblues-light')}>
+          Cool Blues Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("coolblues-dark")}>
-            Cool Blues Dark
+        <DropdownMenuItem onClick={() => setTheme('coolblues-dark')}>
+          Cool Blues Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("sunburst-light")}>
-            Sunburst Light
+        <DropdownMenuItem onClick={() => setTheme('sunburst-light')}>
+          Sunburst Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("sunburst-dark")}>
-            Sunburst Dark
+        <DropdownMenuItem onClick={() => setTheme('sunburst-dark')}>
+          Sunburst Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("rose-light")}>
-            Rose Light
+        <DropdownMenuItem onClick={() => setTheme('rose-light')}>
+          Rose Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("rose-dark")}>
-            Rose Dark
+        <DropdownMenuItem onClick={() => setTheme('rose-dark')}>
+          Rose Dark
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

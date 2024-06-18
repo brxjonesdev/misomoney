@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primaryBackground text-primaryText`}>
+      <body
+        className={`${inter.className} bg-primaryBackground text-primaryText`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
