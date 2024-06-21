@@ -9,10 +9,27 @@ import {
 } from '@/components/ui/card'
 import { JSX, SVGProps } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { createServerClient, type CookieOptions } from '@supabase/ssr'
+import { cookies } from 'next/headers'
+import Settings from '@/components/dashboard/settings.widget'
+
 
 export default function Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const cookieStore = cookies()
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value
+        },
+      },
+    }
+  )
   return (
     <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
       <aside className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
@@ -101,6 +118,7 @@ export default function Layout({
 
             <p>Good Morning, Bae Joo-hyun</p>
           </div>
+         <Settings/>
         </header>
         <section className='h-full'>{children}</section>
       </main>

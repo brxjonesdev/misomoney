@@ -8,10 +8,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { SetAppTheme } from '@/utils/global_utils'
+import { createBrowserClient } from '@supabase/ssr'
 import { ModeToggle } from '@/components/component/theme-switcher'
 
 export default function home() {
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  )
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -63,6 +67,21 @@ export default function home() {
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primaryColor px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                     href="#"
+                    onClick={async () => {
+                      const { data, error } =
+                        await supabase.auth.signInWithOAuth({
+                          provider: 'google',
+                          options: {
+                            queryParams: {
+                              access_type: 'offline',
+                              prompt: 'consent',
+                            },
+                            redirectTo: `${window.location.origin}/home/dashboard`,
+                          },
+                        })
+                      if (error)
+                        console.error('Error logging in:', error.message)
+                    }}
                   >
                     Sign Up
                   </Link>

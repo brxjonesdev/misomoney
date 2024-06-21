@@ -11,26 +11,32 @@ export default function SummaryWidget() {
         </div>
       </CardHeader>
       <CardContent className="p-0 flex gap-12 mx-auto flex-wrap">
-      <div className="flex items-center gap-3">
-            <div className="bg-green-100 p-2 rounded-md dark:bg-green-900/20">
-              <WalletIcon className="w-5 h-5 text-green-500 dark:text-green-400" />
-            </div>
-            <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Total Income</p>
-              <p className="font-medium">$4,500.00</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="bg-red-100 p-2 rounded-md dark:bg-red-900/20">
-              <ReceiptIcon className="w-5 h-5 text-red-500 dark:text-red-400" />
-            </div>
-            <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Total Expenses</p>
-              <p className="font-medium">$3,200.00</p>
-            </div>
-          </div>
         <div className="flex items-center gap-3">
-          <p className="text-sm text-gray-500 dark:text-gray-400">Current Balance</p>
+          <div className="bg-green-100 p-2 rounded-md dark:bg-green-900/20">
+            <WalletIcon className="w-5 h-5 text-green-500 dark:text-green-400" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Total Income
+            </p>
+            <p className="font-medium">$4,500.00</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="bg-red-100 p-2 rounded-md dark:bg-red-900/20">
+            <ReceiptIcon className="w-5 h-5 text-red-500 dark:text-red-400" />
+          </div>
+          <div>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Total Expenses
+            </p>
+            <p className="font-medium">$3,200.00</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Current Balance
+          </p>
           <p className="text-md font-medium">$1,300.00</p>
         </div>
         <div className="flex items-center gap-3">
@@ -42,7 +48,9 @@ export default function SummaryWidget() {
   )
 }
 
-function ReceiptIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
+function ReceiptIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
+) {
   return (
     <svg
       {...props}
@@ -63,7 +71,9 @@ function ReceiptIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSV
   )
 }
 
-function WalletIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
+function WalletIcon(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
+) {
   return (
     <svg
       {...props}
@@ -82,6 +92,3 @@ function WalletIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVG
     </svg>
   )
 }
-
-
-       
